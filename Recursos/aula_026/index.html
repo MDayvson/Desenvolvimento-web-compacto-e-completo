@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,47 +7,33 @@
     <title>Document</title>
 
     <style>
-        body {
-            background-color: black;
-            color: white;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            margin: 0;
-            padding: 0;
+        .form-container {
+            width: 60%;
+            margin: auto;
         }
-
-        .layout {
-            margin: 50px;
-            text-align: center;
+        .form-group {
+            margin-bottom: 10px;
         }
-
-        .link {
-            text-decoration: none;
-            background-color: rgb(28, 114, 163);
-            color: rgb(224, 224, 224);
-            min-width: 200px;
-            padding: 10px 30px;
-            border-radius: 10px;
+        label {
+            display: block;
         }
-
-        .link:hover {
-            background-color: rgb(65, 170, 231);
-            color: rgb(255, 255, 255);
-        }
-
     </style>
 
-
 </head>
-
 <body>
 
-    <div class="layout">
+    <div class="form-container">
+        <h3>Formulário</h3>
+        <form action="https://sys4soft.com/udemy/forms/index.php" method="post">
+            
+            
 
-        <p>Olá Mundo!</p>
-        <a href="https://www.google.com" class="link">Visitar Google</a>
+            <div class="form-group">
+                <input type="submit" value="Enviar">
+            </div>
 
+        </form>
     </div>
 
 </body>
-
 </html>
