@@ -7,7 +7,7 @@
  </div>
  
  # Descrição
-### Desenvolvimento Web Compacto e Completo, curso do professor João Ribeiro pela plataforma UDEMY.
+### Curso de desenvolvimento Web Compacto e Completo, do professor João Ribeiro pela plataforma UDEMY.
 
 
 - HTML5 completo, desde os elementos básicos, organização dos layouts e construção de formulários
