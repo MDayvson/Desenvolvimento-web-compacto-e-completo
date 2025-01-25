@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,22 +12,42 @@
             width: 60%;
             margin: auto;
         }
+
         .form-group {
             margin-bottom: 10px;
         }
+
         label {
             display: block;
         }
     </style>
 
 </head>
+
 <body>
 
     <div class="form-container">
         <h3>Formulário</h3>
         <form action="https://sys4soft.com/udemy/forms/index.php" method="post">
 
-            
+            <div class="form-group">
+                <label>Selecione uma opção</label>
+                <select name="campo_selecao[]" id="" required>
+                    <optgroup label="paises"> 
+                        <option value="br">Brasil</option>
+                        <option value="pt">Portugal</option>
+                        <option value="ao">Angola</option>
+                        <option value="mc">Moçambique</option>
+                        <option value="cv">Cabo Verde</option>
+                    </optgroup>
+
+                    <optgroup label="outros paises">
+                        <option value="fr">França</option>
+                        <option value="de">Alemanha</option>
+                        <option value="es">Espanha</option>
+                    </optgroup>
+                </select>
+            </div>
 
             <div class="form-group">
                 <input type="submit" value="Enviar">
@@ -36,4 +57,5 @@
     </div>
 
 </body>
+
 </html>
