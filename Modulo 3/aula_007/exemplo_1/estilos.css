@@ -1,0 +1,17 @@
+/* folha de estilos de CSS3 */
+.artigo {
+    padding: 20px 50px;
+}
+
+p {
+    font-family: "Genos", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+h1 {
+    font-family: "Anton", serif;
+    font-weight: 400;
+    font-style: normal;
+}
