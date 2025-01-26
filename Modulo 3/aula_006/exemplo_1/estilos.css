@@ -1,4 +1,7 @@
 /* folha de estilos de CSS3 */
 body {
-      font-family: "Titillium Web", sans-serif;
+
+      font-family: "Titillium Web", serif;
+      font-weight: 300;
+      font-style: normal;
 }
