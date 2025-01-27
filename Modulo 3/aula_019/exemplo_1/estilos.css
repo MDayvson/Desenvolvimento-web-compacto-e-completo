@@ -8,6 +8,7 @@ div {
     left: 50px;
     top: 60px;
     background-color: green;
+    z-index: 1;
 }
 
 .area-2 {

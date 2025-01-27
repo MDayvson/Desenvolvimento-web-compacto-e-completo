@@ -10,21 +10,32 @@
         .container {
             display: flex;
             flex-flow: row nowrap;
+            height: 300px;
         }
         div {
             padding: 20px;
+            /* width: 25%; */
         }
         .child-1 {
             background-color: #cad5d6;
+            flex: 1;
+            align-self: flex-end;
+            /* flex-shrink: 10; */
+            /* flex-grow: 2; */
+            /* order: 2; */
         }
         .child-2 {
             background-color: #b4c1c2;
+            align-self: center;
+            /* flex-grow: 1; */
+            /* order: 1; */
         }
         .child-3 {
             background-color: #9facad;
         }
         .child-4 {
             background-color: #849192;
+            align-self: flex-end;
         }
     </style>
 
