@@ -14,7 +14,9 @@
         section {
             display: grid;
             height: 100vh;
-            grid-template-columns: 20% 20% 20%;
+            /* grid-template-columns: repeat(4,25%); */
+            /* grid-template-columns: [col1] 50% [col2] 50%; */
+            grid-template-columns: 1fr 4fr 1fr;
             grid-template-rows: 20% 60%;
         }
         div {
