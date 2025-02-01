@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.wraper {
+    height: 100vh;
+    background-color: white;
+}
+
+.conteiner {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 28% 28% 28% auto; /* Definição das colunas */
+    grid-template-rows: 15% 20% auto 10%; /* Definição das linhas */
+    grid-template-areas: 
+        "header header header header"
+        "text text text aside"
+        "content content content aside"
+        "footer footer footer footer";
+    gap: 5px;
+}
+
+/* Estilização das áreas */
+header {
+    grid-area: header;
+    background-color: rgb(63, 2, 63);
+    color: white;
+    padding: 10px;
+}
+
+/* Estilização da div dentro do header (img) */
+header div {
+    width: 80px;
+    height: 60px;
+    background-color: rgb(155, 20, 155);
+    justify-self: end;
+    display: grid;/* centraliza o texto */
+    place-items: center;/* centraliza o texto */
+    color: white;
+    margin: 20px 10px;
+    padding: 10px;
+}
+
+section {
+    grid-area: text;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5px;
+    
+}
+
+section div {
+    padding: 10px;
+    color: white;
+    display: grid;
+    place-items: center;
+}
+
+/* Definição de cores diferentes para cada bloco de texto */
+section :nth-child(1) {
+    background-color: rgb(38, 6, 162);
+}
+section :nth-child(2) {
+    background-color: rgb(71, 38, 216);
+}
+section :nth-child(3) {
+    background-color: rgb(87, 60, 240);
+}
+
+aside {
+    grid-area: aside;
+    background-color: rgb(47, 72, 216);
+    color: white;
+    padding: 10px;
+}
+
+article {
+    grid-area: content;
+    background-color: rgb(125, 125, 238);
+    color: white;
+    padding: 10px;
+    display: grid; /* centraliza o texto */
+    place-items: center;/* centraliza o texto */
+}
+
+footer {
+    grid-area: footer;
+    background-color: rgb(63, 2, 63);
+    color: white;
+    padding: 10px;
+}
+
