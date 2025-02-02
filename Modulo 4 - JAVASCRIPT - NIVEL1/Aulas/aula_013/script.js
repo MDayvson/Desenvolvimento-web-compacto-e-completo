@@ -15,12 +15,12 @@ A >= B      Se A é maior ou igual a B
 
 // -----------------------------
 // valores e tipos de valores
-// let valor1 = 10
-// let valor2 = "10"
+let valor1 = 10
+let valor2 = "10"
 
-// if(valor1 == valor2){
-//     console.log("Os valores são iguais.")
-// }
+if(valor1 == valor2){
+    console.log("Os valores são iguais.")
+}
 
 /* 
 OPERADORES LÓGICOS
