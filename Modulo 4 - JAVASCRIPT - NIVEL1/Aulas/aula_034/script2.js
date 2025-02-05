@@ -21,12 +21,12 @@ let novo_paragrafo1 = document.createElement('p').textContent = "Texto do novo p
 
 
 // // --------------------------
-// let div2 = document.querySelector("#elemento_3")
-// let novo_paragrafo2 = document.createElement('p').textContent = "Texto do novo parágrafo 2"
-// div2.insertAdjacentHTML('beforebegin', novo_paragrafo2)
-// div2.insertAdjacentHTML('afterbegin', novo_paragrafo2)
-// div2.insertAdjacentHTML('beforeend', novo_paragrafo2)
-// div2.insertAdjacentHTML('afterend', novo_paragrafo2)
+let div2 = document.querySelector("#elemento_3")
+let novo_paragrafo2 = document.createElement('p').textContent = "Texto do novo parágrafo 2"
+div2.insertAdjacentHTML('beforebegin', novo_paragrafo2)
+div2.insertAdjacentHTML('afterbegin', novo_paragrafo2)
+div2.insertAdjacentHTML('beforeend', novo_paragrafo2)
+div2.insertAdjacentHTML('afterend', novo_paragrafo2)
 
 
 // // REMOVER ELEMENTOS DO HTML
