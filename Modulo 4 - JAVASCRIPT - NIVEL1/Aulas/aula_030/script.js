@@ -2,6 +2,7 @@
 
 let el = null
 
+
 // Seletores mais básicos
 
 // universal selector - *
