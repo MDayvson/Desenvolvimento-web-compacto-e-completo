@@ -1,0 +1,21 @@
+
+#nav {
+    background-color: aliceblue;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+
+#nav a {
+    color: black;
+}
+
+#nav a:hover{
+    color: red;
+}
+
+#contatos {
+    background-color: aquamarine;
+    padding: 100px;
+    
+}
