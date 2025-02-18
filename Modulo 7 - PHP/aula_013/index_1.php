@@ -15,11 +15,11 @@
     
     $_idade = 50;
     
-    $01teste = 100; // NOK
+    // $01teste = 100; // NOK
     
     $nome_da_variavel = "carlos";
 
-    $nome da variavel = "joaquim";  // NOK
+    // $nome da variavel = "joaquim";  // NOK
 
     $valor_01 = 1000;
 
