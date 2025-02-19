@@ -7,3 +7,9 @@
 
         Resultado: 12.8 m
     */
+
+    $lado = 3.2;
+    $perimetro = $lado * 4;
+    echo "O perímetro do quadrado é: $perimetro m\n";
+
+    echo (3.2 * 4) .' m';

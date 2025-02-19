@@ -10,3 +10,15 @@
 
         Resultado: 4
     */
+    $a = $b = 20;
+    $c =  $d = 5;
+
+    $resultado = (($a + $b) / ($c + $d));
+    echo $resultado;
+    // _____________________________________
+
+    $ab = $a + $b;
+    $cd = $c + $d;
+
+    $resultado = $ab / $cd;
+    echo $resultado;

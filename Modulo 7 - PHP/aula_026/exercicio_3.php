@@ -9,3 +9,10 @@
 
         Resultado: 450
     */
+    $var1 = $var2 = $var3 = 15;
+   
+    $var1 = $var1 * 5;
+    $var2 = $var2 * 10;
+    $var3 = $var3 * 15;
+
+   echo $var1 + $var2 + $var3;

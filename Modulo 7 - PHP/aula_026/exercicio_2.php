@@ -8,3 +8,6 @@
 
         Resultado: 200
     */
+    $numero = 50;
+    $resultado = $numero * 4;
+    echo "O resultado da multiplicação é: $resultado";

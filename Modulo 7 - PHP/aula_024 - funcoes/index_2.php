@@ -16,8 +16,8 @@
     var_dump(key_exists('telefone', $cliente)); // bool(false)
 
     // array para string
-    $resultado = implode(",", $cliente);
-    var_dump($resultado);   //  "joao,ribeiro,48,joao@gmail.com"
+    $resultado = implode(" , ", $cliente);
+    var_dump($resultado);   //  "joao, ribeiro,48, joao@gmail.com"
 
     // criar um novo array a partir de uma porção de outro array
     $nomes = ["joao", "ana", "carlos", "francisco", "cristina"];
