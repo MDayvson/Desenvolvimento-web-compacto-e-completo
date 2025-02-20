@@ -9,6 +9,17 @@
     */
 
     $mensagem_erro = '';
+
+    $css = '';
+    $mensagem = null;
+    if (!empty($mensagem_erro)) {
+        $css = 'erro';
+        $mensagem = $mensagem_erro;
+    }
+    else {
+        $css = 'sucesso';
+        $mensagem = 'SUCESSO';
+    }
 ?>
 
 <!DOCTYPE html>
@@ -30,7 +41,7 @@
     </style>
 </head>
 <body>
-
+        <div class="<?= $css ?>"> <?= $mensagem ?> </div>
     
 
 </body>

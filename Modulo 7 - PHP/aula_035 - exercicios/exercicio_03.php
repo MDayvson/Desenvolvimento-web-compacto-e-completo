@@ -6,6 +6,8 @@
     */
 
     $produtos = ['laranja', 'arroz', 'batata', 'feijão', 'castanha'];
+
+    sort($produtos);
 ?>
 
 <!DOCTYPE html>
@@ -18,6 +20,11 @@
 </head>
 <body>
     
+    <ul>
+        <?php foreach ($produtos as $produto):?>
+            <li><?= $produto;?></li>
+            <?php endforeach;?>
+    </ul>
     
 
 </body>

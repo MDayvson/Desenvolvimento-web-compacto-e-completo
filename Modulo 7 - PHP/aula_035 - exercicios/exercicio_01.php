@@ -19,8 +19,17 @@
     <title>Exercício 1</title>
 </head>
 <body>
+    <!-- resposta do professor  -->
+    <li><?= $produtos[0] ?></li>
+    <li><?= $produtos[1] ?></li>
+    <li><?= $produtos[2] ?></li>
 
-    
 
+    <ul>
+        <?php foreach($produtos as $produto): ?>
+            <li><?= trim($produto) ?></li>  <!-- O trim remove espaços indesejados-->
+        <?php endforeach; ?>
+    </ul>
 </body>
+
 </html>

@@ -26,11 +26,16 @@
 </head>
 <body>
 
-        <h3><!-- nome da cidade (se existe) --></h3>
-        <p><!-- email da loja da cidade (se existe) --></p>
+        <!-- nome da cidade (se existe) -->
+        <?php if (key_exists($cidade, $lojas)): ?>
+            <h3><?= $cidade ?></h3>
+            
+            <!-- email da loja da cidade (se existe) -->
+            <p><?= $lojas[$cidade]; ?></p>
 
         <!-- quando não existe cidade na coleção das $lojas -->
-        <p>Não existe nenhuma loja na cidade indicada.</p>
-
+        <?php else: ?>
+            <p>Não existe nenhuma loja na cidade indicada.</p>
+        <?php endif; ?>
 </body>
 </html>

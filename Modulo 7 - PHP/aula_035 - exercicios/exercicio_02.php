@@ -18,8 +18,15 @@
     <title>Exercício 2</title>
 </head>
 <body>
+    <?php $reverse = array_reverse($produtos)?>
+    <?php array_push($reverse, 'maçã', 'pêra')?>
     
-    
+    <ul>
+        <?php foreach($reverse as $reverse): ?>
+            <li> <?= $reverse ?> </li>
+        <?php endforeach; ?>
+
+    </ul>
 
 </body>
 </html>
