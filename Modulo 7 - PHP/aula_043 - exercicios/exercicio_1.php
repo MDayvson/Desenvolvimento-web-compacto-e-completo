@@ -20,6 +20,10 @@
     <title>Document</title>
 </head>
 <body>
+    <h1>Tabuada do 5</h1>
+    <?php for ($i=1; $i<=10; $i++):?>
+        <p> 5 x <?= $i; ?> = <?= 5*$i ?> </p>
+        <?php endfor;?>
     
     
 

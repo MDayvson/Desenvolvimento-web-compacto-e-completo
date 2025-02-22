@@ -16,6 +16,10 @@
     <title>Document</title>
 </head>
 <body>
+    <?php foreach($nomes as $key => $value): ?>
+        <?php if($key == 4) continue ?>
+            <p><?=$value?></p>
+    <?php endforeach; ?>
     
     
 

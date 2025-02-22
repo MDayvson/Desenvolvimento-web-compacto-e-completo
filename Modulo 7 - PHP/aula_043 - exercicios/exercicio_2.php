@@ -4,7 +4,10 @@
     1. Constrói um array com todos os resultados da tabuáda dos 327.
     2. Apresenta os dados do array com um ciclo foreach (apenas os valores)
     */
-
+    $resultado = [];
+    for ($i=1; $i<=10; $i++){
+        array_push($resultado, 327*$i);
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -16,6 +19,10 @@
 </head>
 <body>
     
+        <?php foreach ($resultado as $resultado):?>
+        <p><?= $resultado ?></p>
+        <?php endforeach; ?>
+ 
     
 
 </body>
