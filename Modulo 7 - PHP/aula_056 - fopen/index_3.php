@@ -11,3 +11,4 @@ for($i = 1; $i <=1000; $i++){
     // fwrite() é um alias de fputs
 }
 fclose($file);
+echo 'terminou';
