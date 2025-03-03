@@ -25,15 +25,15 @@ function adicionar($a, $b){
     return $a + $b;
 }
 
-echo adicionar("joao", 10);
+// echo adicionar("joao", 10);
 
 
 // agora usando a estrutura try catch para impedir o fim da execução.
-// try {
-//     echo adicionar("joao", 10);
-// } catch (Exception $erro) {
-//     echo $erro->getMessage();
-// }
+try {
+    echo adicionar("joao", 10);
+} catch (Exception $erro) {
+    echo $erro->getMessage();
+}
 
 echo '<br>Fim do script.';
 
