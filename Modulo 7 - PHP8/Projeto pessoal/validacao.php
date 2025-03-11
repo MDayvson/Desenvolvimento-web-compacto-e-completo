@@ -1,74 +1,93 @@
-<?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $erros = [];
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Formulário Bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="mb-4">Formulário de Cadastro</h2>
+        <form action="validacao.php" method="POST" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label for="nome" class="form-label">Nome Completo</label>
+                <input type="text" class="form-control" id="nome" name="nome" required>
+            </div>
 
-    // Validação do Nome (mínimo 3 caracteres)
-    if (empty($_POST["nome"]) || strlen(trim($_POST["nome"])) < 3) {
-        $erros[] = "O nome deve ter pelo menos 3 caracteres.";
-    }
+            <div class="mb-3">
+                <label for="email" class="form-label">E-mail</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
 
-    // Validação do E-mail (formato válido)
-    if (empty($_POST["email"]) || !filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
-        $erros[] = "Informe um e-mail válido.";
-    }
+            <div class="mb-3">
+                <label for="telefone" class="form-label">Telefone</label>
+                <input type="text" class="form-control" id="telefone" name="telefone" required>
+            </div>
 
-    // Validação da Senha (mínimo 6 caracteres)
-    if (empty($_POST["senha"]) || strlen($_POST["senha"]) < 6) {
-        $erros[] = "A senha deve ter pelo menos 6 caracteres.";
-    }
+            <div class="mb-3">
+                <label for="nascimento" class="form-label">Data de Nascimento</label>
+                <input type="date" class="form-control" id="nascimento" name="nascimento" required>
+            </div>
 
-    // Validação do Telefone (10 ou 11 dígitos)
-    if (empty($_POST["telefone"]) || !preg_match("/^\d{10,11}$/", $_POST["telefone"])) {
-        $erros[] = "O telefone deve ter 10 ou 11 dígitos.";
-    }
+            <div class="mb-3">
+                <label for="cpf" class="form-label">CPF</label>
+                <input type="text" class="form-control" id="cpf" name="cpf" required>
+            </div>
 
-    // Validação da Data de Nascimento (não pode ser futura)
-    if (!empty($_POST["dataNascimento"])) {
-        $dataNascimento = strtotime($_POST["dataNascimento"]);
-        $hoje = strtotime(date("Y-m-d"));
-        if ($dataNascimento > $hoje) {
-            $erros[] = "A data de nascimento não pode ser futura.";
-        }
-    } else {
-        $erros[] = "Informe sua data de nascimento.";
-    }
+            <div class="mb-3">
+                <label for="senha" class="form-label">Senha</label>
+                <input type="password" class="form-control" id="senha" name="senha" required>
+            </div>
 
-    // Validação do Gênero (não pode ser vazio)
-    if (empty($_POST["genero"])) {
-        $erros[] = "Selecione um gênero.";
-    }
+            <div class="mb-3">
+                <label class="form-label">Gênero</label>
+                <select class="form-select" name="genero">
+                    <option value="">Selecione...</option>
+                    <option value="Masculino">Masculino</option>
+                    <option value="Feminino">Feminino</option>
+                    <option value="Outro">Outro</option>
+                </select>
+            </div>
 
-    // Validação do Endereço
-    if (empty($_POST["endereco"])) {
-        $erros[] = "Informe seu endereço.";
-    }
+            <div class="mb-3">
+                <label for="endereco" class="form-label">Endereço</label>
+                <input type="text" class="form-control" id="endereco" name="endereco" required>
+            </div>
 
-    // Validação do Arquivo (opcional, mas deve ser um tipo permitido)
-    if (!empty($_FILES["arquivo"]["name"])) {
-        $permitidos = ["pdf", "doc", "docx", "png", "jpg", "jpeg"];
-        $extensao = pathinfo($_FILES["arquivo"]["name"], PATHINFO_EXTENSION);
+            <div class="mb-3">
+                <label for="cep" class="form-label">CEP</label>
+                <input type="text" class="form-control" id="cep" name="cep" required>
+            </div>
 
-        if (!in_array(strtolower($extensao), $permitidos)) {
-            $erros[] = "Tipo de arquivo não permitido. Apenas PDF, DOC, DOCX, PNG, JPG, JPEG.";
-        }
-    }
+            <div class="mb-3">
+                <label for="cidade" class="form-label">Cidade</label>
+                <input type="text" class="form-control" id="cidade" name="cidade" required>
+            </div>
 
-    // Se houver erros, exibe na tela
-    if (!empty($erros)) {
-        echo "<div class='container mt-3'>";
-        echo "<div class='alert alert-danger'><ul>";
-        foreach ($erros as $erro) {
-            echo "<li>$erro</li>";
-        }
-        echo "</ul></div>";
-        echo "<a href='index.html' class='btn btn-primary'>Voltar</a>";
-        echo "</div>";
-    } else {
-        // Se não houver erros, exibe mensagem de sucesso
-        echo "<div class='container mt-3'>";
-        echo "<div class='alert alert-success'>Cadastro realizado com sucesso!</div>";
-        echo "<a href='index.html' class='btn btn-primary'>Voltar</a>";
-        echo "</div>";
-    }
-}
-?>
+            <div class="mb-3">
+                <label for="estado" class="form-label">Estado</label>
+                <select class="form-select" id="estado" name="estado" required>
+                    <option value="">Selecione...</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="arquivo" class="form-label">Upload de Arquivo</label>
+                <input type="file" class="form-control" id="arquivo" name="arquivo" required>
+            </div>
+
+            <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="termos" name="termos" required>
+                <label class="form-check-label" for="termos">Aceito os termos e condições</label>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+    </div>
+</body>
+</html>
