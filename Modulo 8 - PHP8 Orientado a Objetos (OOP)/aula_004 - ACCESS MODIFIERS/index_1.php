@@ -32,6 +32,6 @@ $h = new Homem();
 
 // Agora, se tentármos o acesso a cada uma das propriedades:
 
-$h->nome = "João";                  // OK
-$h->apelido = "Ribeiro";            // ERRO
+$h->nome = "Merari";                  // OK
+$h->apelido = "Dayvson";            // ERRO
 $h->$cor_do_cabelo = "Castanho";    // ERRO
