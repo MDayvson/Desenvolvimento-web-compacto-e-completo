@@ -29,14 +29,14 @@ abstract class Pessoa
 
 class Cliente extends Pessoa
 {
-    public function falar($mensagem, $autor = 'joao')
+    public function falar($mensagem, $autor = 'Joao')
     {
         echo "$mensagem - $autor";
     }
 }
 
 $cliente = new Cliente();
-$cliente->falar('mensagem de teste', 'carlos');
+$cliente->falar('mensagem de teste', 'Dayvson');
 
 // IMPORTANTE: a assinatura do método em Cliente, tem que ser igual à
 // assinatura do método na class abstrata. Contudo, ao adicionar um parâmetro
